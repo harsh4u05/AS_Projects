@@ -59,8 +59,6 @@ dependencies {
     implementation("androidx.room:room-ktx:$roomVersion")
     //Firebase storage
     implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
-    // FirebaseUI Storage only
-    implementation 'com.firebaseui:firebase-ui-storage:7.2.0'
     //viewModel livedata
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"

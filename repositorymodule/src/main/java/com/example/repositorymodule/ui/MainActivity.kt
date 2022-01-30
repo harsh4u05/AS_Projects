@@ -14,6 +14,7 @@ import com.example.repositorymodule.entity.firestorage.StorageDataSource
 import com.example.repositorymodule.entity.firestorage.StorageMethods
 import com.example.repositorymodule.entity.repository.ImagesRepository
 import com.example.repositorymodule.utils.Resource
+import com.example.repositorymodule.utils.getRefFromString
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
@@ -48,15 +49,21 @@ class MainActivity : AppCompatActivity() {
 
     private fun getGlideImageFromStorage() {
 
-        viewModel.images.observe(this, Observer {
+        viewModel.images.observe(this) {
 
-            when(it.status){
+            when (it.status) {
                 Resource.Status.SUCCESS -> {
                     binding.progressBar.visibility = View.GONE
+
                     Timber.d("---------- Main getGlideImageFromStorage() arrayList size : ${it.data!!.size}")
+                   // val tmp = Firebase.storage.reference.child("Cancelled_Cheque.jpg").toString()
+                    val tmpRef = getRefFromString(it.data[0].imageUri)
+                    //  Firebase.storage.getReferenceFromUrl(it.data!![0].imageUri)
                     GlideApp.with(this)
                         //.load(Firebase.storage.reference.child("Cancelled_Cheque.jpg"))
-                        .load(it.data!![0].child(filePath[0]))
+                        //.load(refs.child(filePath[0]))
+                        .load(tmpRef)
+                        //.load(it.data!![0].imageUri)
                         .into(binding.imageView)
                 }
 
@@ -67,6 +74,6 @@ class MainActivity : AppCompatActivity() {
                     binding.progressBar.visibility = View.VISIBLE
             }
 
-        })
+        }
     }
 }

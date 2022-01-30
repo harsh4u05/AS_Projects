@@ -1,4 +1,4 @@
-package com.example.loginmodule.login.fragments
+package com.example.projectmodules01.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -15,9 +15,7 @@ class LoginViewModel @Inject constructor(): ViewModel() {
     private val userLiveData =  UserLiveData()
     private val _userLogged = MutableLiveData<Boolean>()
 
-    val userLogged: LiveData<Boolean> = _userLogged
-
-    val authState = userLiveData.map { user ->
+    val authenticationState = userLiveData.map { user ->
         if (user != null) {
             LoginViewState.LoginSuccess
         } else {

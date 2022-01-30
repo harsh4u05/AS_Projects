@@ -2,4 +2,13 @@
     <string name="app_name">ProjectModules01</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_login">fragment_login</string>
+    <string name="fragment_main">fragment_main</string>
+    <string name="show_profile">Show Profile</string>
+    <string name="show_images">Show Images</string>
+    <string name="fragment_profile">fragment_profile</string>
+    <string name="logout">Logout</string>
+    <string name="textview">TextView</string>
+    <string name="image_module">Image Module</string>
+    <string name="showUserContent">ShowUserContent() : User %1$s is logged.</string>
 </resources>

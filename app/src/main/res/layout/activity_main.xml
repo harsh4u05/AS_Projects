@@ -9,6 +9,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -20,6 +21,10 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
 
 <!--    <TextView-->
 <!--        android:id="@+id/textView"-->
@@ -63,7 +68,3 @@
 <!--        app:layout_constraintRight_toRightOf="parent"-->
 <!--        app:layout_constraintTop_toBottomOf="@id/toImageButton"-->
 <!--        />-->
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-</layout>

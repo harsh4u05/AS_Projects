@@ -11,4 +11,8 @@ class ImagesRepository @Inject constructor(
         storageQuery = {storageDataSource.getImagesRefs()}
     )
 
+    fun getImageRef() = performGetOperation(
+        storageQuery = {storageDataSource.getImageRef()}
+    )
+
 }
